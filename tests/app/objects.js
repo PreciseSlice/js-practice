@@ -3,7 +3,7 @@ if ( typeof window === 'undefined' ) {
   var expect = require('chai').expect;
 }
 
-describe.only('objects and context', function() {
+describe('objects and context', function() {
   var a;
   var b;
   var C;

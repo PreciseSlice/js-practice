@@ -28,7 +28,7 @@ describe('arrays', function() {
     expect(result.join(' ')).to.eql('1 3 4');
   });
 
-  xit('you should be able to remove all instances of a value from an array, returning the original array', function() {
+  it('you should be able to remove all instances of a value from an array, returning the original array', function() {
     a.splice( 1, 0, 2 );
     a.push( 2 );
     a.push( 2 );
@@ -42,21 +42,21 @@ describe('arrays', function() {
     expect(result).equal(a);
   });
 
-  xit('you should be able to add an item to the end of an array', function() {
+  it('you should be able to add an item to the end of an array', function() {
     var result = arraysAnswers.append(a, 10);
 
     expect(result).to.have.length(5);
     expect(result[result.length - 1]).to.eql(10);
   });
 
-  xit('you should be able to remove the last item of an array', function() {
+  it('you should be able to remove the last item of an array', function() {
     var result = arraysAnswers.truncate(a);
 
     expect(result).to.have.length(3);
     expect(result.join(' ')).to.eql('1 2 3');
   });
 
-  xit('you should be able to add an item to the beginning of an array', function () {
+  it.only('you should be able to add an item to the beginning of an array', function () {
     var result = arraysAnswers.prepend(a, 10);
 
     expect(result).to.have.length(5);

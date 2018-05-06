@@ -34,31 +34,56 @@ exports.arraysAnswers = {
     // arr.pop();
     // return arr
 
-  //--------------------------------
+    //--------------------------------
 
     // another in place
 
     // arr.splice(-1, 1);
     // return arr
 
-  //-------------------------------
-
+    //--------------------------------
+    
     // copy does not mutate original
-
-    return arr.slice(0, -1)
+    
+    return arr.slice(0, -1);
+  },
+  
+  prepend: function(arr, item) {
+    // works
+    // arr.splice(0, 0, item);
+    
+    //--------------------------------
+    
+    // best practice
+    arr.unshift(item);
+    return arr;
+  },
+  
+  curtail: function(arr) {
+    // works
+    // return arr.slice(1);
+    
+    //--------------------------------
+    
+    // best practice
+    arr.shift();
+    return arr;
   },
 
-  prepend: function(arr, item) {
+  concat: function(arr1, arr2) {
+    //return arr1.concat(arr2);
+
+    return [...arr1, ...arr2];
+  },
+
+  insert: function(arr, item, index) {
+    arr.splice(index, 0, item);
+    return arr;
+  },
+
+  count: function(arr, item) {
     
   },
-
-  curtail: function(arr) {},
-
-  concat: function(arr1, arr2) {},
-
-  insert: function(arr, item, index) {},
-
-  count: function(arr, item) {},
 
   duplicates: function(arr) {},
 

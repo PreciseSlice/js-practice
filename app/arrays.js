@@ -82,7 +82,15 @@ exports.arraysAnswers = {
   },
 
   count: function(arr, item) {
-    
+    let tally = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      if(arr[i] === item) {
+        tally++;
+      }
+    }
+
+    return tally;
   },
 
   duplicates: function(arr) {},
